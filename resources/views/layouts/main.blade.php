@@ -35,6 +35,14 @@
                 </button>
                 <div class="collapse navbar-collapse NavMenu" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Login</a>
+                            </li>
+                        @else
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home </a>
                         </li>
@@ -51,6 +59,7 @@
                             <img style="width: 40px ; border-radius: 50px"
                                 src="https://scontent.fhan5-7.fna.fbcdn.net/v/t1.0-9/66533402_2379376472311268_3979453075675938816_n.jpg?_nc_cat=103&_nc_oc=AQk1j38VTQT3pxhBg_F97PWoincxGr2XGPVnZnFbndwVaNFzt3MN_xHVveHT1Z9ms94&_nc_ht=scontent.fhan5-7.fna&oh=23449f57690a203ee191d071ee1550ff&oe=5E135B9C">
                         </li>
+                        @endguest
                     </ul>
                 </div>
             </div>
