@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap&subset=latin-ext,vietnamese');
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #F7F8F9;
+    font-family: "Avenir Next"
+}
+
+.navbar-brand img {
+    width: 80px;
+}
+
+.NavMenu ul li {
+    padding: 0 0 0 15px;
+}
+
+.NavMenu ul li a {
+    font-weight: 500;
+    color: #4f5962;
+}
+
+.jumbotron {
+    height: 600px;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('https://images.unsplash.com/photo-1541123603104-512919d6a96c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+    background-size: cover;
+}
+
+.BannerCaption {
+    margin: 150px 0 0 0;
+    text-align: center;
+}
+
+.BannerCaption h4 {
+    color: white;
+    font-size: 32px;
+}
+
+.BannerCaption p {
+    color: white;
+    font-size: 18px;
+}
+
+.FormSearch::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.HomeSearch {
+    text-align: center;
+}
+
+.FormSearch {
+    height: 48px;
+    border: none;
+}
+
+.Inputicon {
+    position: relative;
+    color: #555;
+    display: block;
+}
+
+.btnHome {
+    background-color: #F15E75;
+    border: none;
+    color: white;
+    font-size: 15px;
+    height: 48px;
+    width: 100px;
+}
+
+.HomeContent {
+    margin-top: 60px;
+}
+
+.HotelCard {
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 40px 0 rgba(162, 162, 162, 0.17);
+}
+
+.FeaturedProperty {
+    position: absolute;
+    margin: 15px 0 0 15px;
+}
+
+.Price {
+    position: absolute;
+    margin: 200px 0 0 15px;
+}
+
+.FeaturedBtn.col {
+    background-color: #54c4d9;
+    color: white;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 4px 9px 4px 9px;
+}
+
+.HotelPricing.col {
+    color: white;
+    margin-right: 130px;
+}
+
+.Hostimg.col img {
+    width: 40px;
+    margin-top: -25px;
+    border-radius: 360px;
+    border: thin solid white;
+}
+
+.CardBody.col {}
+
+.CardBody.col h5 {
+    font-size: 16px;
+}
+
+.CardBody.col p {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #949ca5;
+}
+
+.RoomProperty.row {
+    color: #000000;
+    font-size: 14px;
+}
+
+.HotelStarRating {
+    color: orange;
+    margin-top: 15px;
+    margin-left: 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.justify-content-center.row {
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+
+.HomeHotelLoadmore.btn {
+    background-color: #F15E75;
+    color: white;
+    padding: 8px 40px 8px 40px;
+    font-weight: bold;
+}
+
+.section.TopDestination {
+    background-color: white;
+    height: 900px;
+    margin-bottom: 60px;
+    padding: 80px 0 30px 0;
+    width: auto;
+}
+
+.DestinationCard.card {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.WhereDestination.card-img-overlay {
+    color: white;
+    align-content: center;
+}
+
+.Destination.card-img {
+    height: 300px;
+    border: none;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.ui-datepicker {
+    background-color: #555;
+    color: #F15E75;
+}
+
+.ui-state-default {
+    color: #F15E75 !important;
+}
+
+.section.FindaPlace {
+    width: auto;
+}
+
+.section.HeroAction {
+    background-image: url('https://images.unsplash.com/photo-1488805990569-3c9e1d76d51c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    height: 650px;
+    padding: 250px 0 0 0;
+    background-attachment: fixed;
+}
+
+.card-body.HeroContent h5 {
+    margin-bottom: 30px;
+}
+
+.card-body.HeroContent h6 {
+    margin-bottom: 30px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.card-body.HeroContent p {
+    margin-bottom: 30px;
+}
+
+.section.Partners {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+
+/* .col-3.PartnersLogoBg img {
+    width: 30px;
+    padding: 10px;
+} */
+
+.section.Footer {
+    background-color: white;
+    height: 50px;
+}
+
+.FooterLinks p {
+    margin: 0 0 10px 0;
+}
+
+
+/*Propertypage*/
+
+.jumbotron.gallery {
+    background-image: url('https://images.unsplash.com/photo-1488901512066-cd403111aeb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80');
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 30px;
+    border-radius: 0px;
+}
+
+.DetailsBody {
+    height: 620px;
+    background-color: white;
+    padding: 20px 30px 20px 30px;
+    border-radius: 5px;
+}
+
+.FirstDetails {}
+
+.breadcrumb.Details {
+    background-color: transparent;
+}
+
+.breadcrumb.Details li {
+    background-color: transparent;
+    font-size: 12px;
+    color: #000000;
+}
+
+.col-9.FullDetails h5 {
+    margin-top: -19px;
+}
+
+.col-9.FullDetails p {
+    color: #000000;
+    font-size: 12px;
+}
+
+.col.HostPicture img {
+    width: 50px;
+    border-radius: 360px;
+    float: right;
+    margin-top: 10px;
+}
+
+.row.RoomFeatures {
+    text-align: center;
+}
+
+.col.icon i {
+    font-size: 30px;
+    color: #949ca5;
+    margin-bottom: 20px;
+}
+
+.col.icon p {
+    font-size: 12px;
+    color: #000000;
+}
+
+.AboutRoom {}
+
+.AboutRoom p {
+    margin: 20px 0 0 0;
+    color: #000000;
+    font-size: 12px;
+}
+
+.row.RoomIndetails {}
+
+.col.IndetailsText ul {
+    align-items: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.col.IndetailsText li {
+    margin: 0 0 5px 0;
+}
+
+.col.IndetailsText i {
+    margin-right: 6px;
+}
+
+.col-4.instantbooking {
+    background-color: white;
+    height: 535px;
+    margin-left: 80px;
+}
+
+.SocialShareRooms {
+    background-color: #949ca51f;
+    height: 50px;
+    width: 380px;
+    margin-top: 1px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 13px 13px 13px 85px;
+    font-size: 15px
+}
+
+.SocialShareRooms i {
+    color: #949ca5;
+    margin-right: 30px;
+}
+
+
+/* .SocialShareRooms i:Hover {
+    background-color: #54c4d9;
+    border-radius: 360px;
+    color: white
+} */
+
+.col.PriceTittle {
+    background-color: #3b4249;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 50px;
+}
+
+.col.PriceTittle H4 {
+    color: white;
+    font-size: 14px;
+    margin: 16px 20px 20px 20px;
+}
+
+.col.Instantform {
+    margin: 20px 20px 20px 20px;
+}
+
+.instantform {
+    margin: 0 0 10px 0;
+}
+
+.row.Hostinfo {
+    margin-top: 40px;
+    height: 200px;
+}
+
+.col-7.HostinfoStart {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+}
+
+.col-2.HostPictureInfo img {
+    width: 50px;
+    border-radius: 360px;
+}
+
+.col.HostName {
+    margin-left: -20px;
+}
+
+.row.SimilarRooms {
+    margin-top: 50px;
+}
+
+.col-7.SimilarRooms {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.col-6.SimilarHotelImg img {
+    width: 300px;
+    margin-left: -15px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.col.SimilarRoomsDetails {
+    margin: 40px 20px 20px 0px;
+    padding-left: 0;
+}
+
+
+/*FORM SIDE*/
+
+.myform {
+    height: 50px;
+    border: none;
+    font-size: 13px;
+    border-width: 1px !important;
+    border-radius: 5px;
+    border-style: solid !important;
+    border-color: rgb(228, 228, 228) !important;
+}
+
+.myform::placeholder {
+    font-size: 13px;
+    color: #4f5962;
+}
