@@ -445,11 +445,11 @@
         <div class="container">
             <div class="card " style="width: 30rem; border: none; opacity: 0.9">
                 <div class="card-body HeroContent">
-                    <h5 class="card-title">Modern Apartment</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">$79 at night</h6>
+                    <h5 class="card-title">Rent Your Modern Apartment Out</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Starting from $79 at night</h6>
                     <p class="card-text">I am text block. Click edit button to change this text. Lorem ipsum dolor sit
                         amet, consectetur adipiscing elit.</p>
-                    <button type="button" class="btn HomeHotelLoadmore">Book Now</button>
+                    <a href="/owner/register" class="btn HomeHotelLoadmore">Become a Owner</a>
                 </div>
             </div>
         </div>

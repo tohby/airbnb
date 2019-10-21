@@ -25,7 +25,7 @@
 <body>
     <div class="sectionlogin">
         <div class="row">
-            <div class="col-5 sectionImage"></div>
+            <div class="col-5 sectionImage2"></div>
             <div class="col-7 LoginForm ">
                 <h4>Sign up with Facebook or Google</h4>
                 <p>
@@ -71,7 +71,7 @@
                                 name="password_confirmation" placeholder="Confrim Password" required
                                 autocomplete="new-password" />
                         </div>
-                        <input type="hidden" name="role" value="0">
+                        <input type="hidden" name="role" value="1">
                         <div class="row loginbtn">
                             <div class="col loginbtn">
                                 <button class="btn btn-primary" type="submit">Login</button>
@@ -82,9 +82,9 @@
                         </div>
                         <div class="row Loginsocial">
                             <div class="col sociallogin">
-                                <img src="svg/facebook.svg">
-                                <img src="svg/twitter.svg">
-                                <img src="svg/google-plus.svg">
+                                <img src="{{ asset('svg/facebook.svg')}}">
+                                <img src="{{ asset('svg/twitter.svg')}}">
+                                <img src="{{ asset('svg/google-plus.svg')}}">
                             </div>
                             <div class="col forgotpassword"></div>
                         </div>

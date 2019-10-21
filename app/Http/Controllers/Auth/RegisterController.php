@@ -28,7 +28,16 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/dashboard';
+    public function redirectTo(){
+    // redirect based on user role
+        if (Auth::user()->role == 0){
+            return '/';
+        } else {
+            return '/dashboard';
+        }
+
+    }
 
     /**
      * Create a new controller instance.
@@ -67,6 +76,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role' => $data['role'],
         ]);
     }
 }

@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="Assets/homey-logo@2x.png" Alt="">
+                    <img src="logo/homey-logo@2x.png" Alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +37,10 @@
                     <ul class="navbar-nav ml-auto">
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Register</a>
+                                <a class="nav-link" href="{{ route('register') }}">Register</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
                             </li>
                         @else
                         <li class="nav-item">
@@ -55,9 +55,22 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Register</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                             <img style="width: 40px ; border-radius: 50px"
                                 src="https://scontent.fhan5-7.fna.fbcdn.net/v/t1.0-9/66533402_2379376472311268_3979453075675938816_n.jpg?_nc_cat=103&_nc_oc=AQk1j38VTQT3pxhBg_F97PWoincxGr2XGPVnZnFbndwVaNFzt3MN_xHVveHT1Z9ms94&_nc_ht=scontent.fhan5-7.fna&oh=23449f57690a203ee191d071ee1550ff&oe=5E135B9C">
+                            </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                            
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
                         </li>
                         @endguest
                     </ul>

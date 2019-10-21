@@ -9,6 +9,13 @@ body{
     background-image: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80');
     background-size: cover;
 }
+
+.col-5.sectionImage2{
+    height: 821px;
+    background-image: url('https://images.unsplash.com/photo-1551214538-82701c130e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80');
+    background-size: cover;
+}
+
 .col-7.LoginForm{
     text-align: center;
    padding: 150px 45px 50px 45px;
