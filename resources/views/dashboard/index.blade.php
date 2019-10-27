@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="addsection">
-                            <form action="{{action("DashboardController@store")}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{action("RoomController@store")}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -96,7 +96,7 @@
                                 <P style="margin-top: 30px">Cancellation Policy</P>
                                 <p>Free cancellation for 48 hours. After that, cancel before 3:00PM on Jul 19 and get a 50% refund, minus the service fee.
                                     Free cancellation for 48 hours. After that, cancel before 3:00PM on Jul 19 and get a 50% refund, minus the service fee.</p>
-                                    <input type="file" class="btn" style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;" name="apartmentImage">
+                                    <input type="file" class="btn" style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;" name="apartmentImage[]" multiple>
                                 <button type="submit" class="btn" style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;">Sign in</button>
                             </form>
                         </div>

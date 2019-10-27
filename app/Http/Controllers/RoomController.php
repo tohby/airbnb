@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Room;
+use App\RoomImages;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -15,6 +16,8 @@ class RoomController extends Controller
     public function index()
     {
         //
+        //
+        return view('dashboard/index');
     }
 
     /**
@@ -24,28 +27,7 @@ class RoomController extends Controller
      */
     public function create(Request $request)
     {
-        $room = new Room();
-        $room->apartmentName = $request->input(apartmentName);
-        $room->apartmentAddress = $request->input(apartmentAddress);
-        $room->apartmentAmenities = $request->input(apartmentAmenities);
-        $room->apartmentDescription = $request->input(apartmentDescription);
-        $room->apartmentRules = $request->input(apartmentRules);
-        $room->apartmentPrice = $request->input(apartmentPrice);
-        $room->apartmentRatings = $request->input(apartmentRatings);
-        $room->apartmentAvailablefrom = $request->input(apartmentAvailablefrom);
-
-        if ($request->hasfile('apartmentImage')) {
-            $file = $request->file('apartmentImage');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move('uploads/highlights/', $filename);
-            $room->image = $filename;
-        } else {
-            return $request;
-            $room->image = '';
-        }
-        $room->save();
-        return view('/');
+        
     }
 
     /**
@@ -57,6 +39,40 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'apartmentName' => 'required',
+            'apartmentAddress' => 'required',
+            'apartmentPrice'  => 'required',
+        ]);
+        $room = Room::create([
+            'apartmentName' => $request->input('apartmentName'),
+            'apartmentAddress' => $request->input('apartmentAddress'),
+            'apartmentAmenities' => $request->input('apartmentAmenities'),
+            'apartmentDescription' => $request->input('apartmentDescription'),
+            'apartmentRules' => $request->input('apartmentRules'),
+            'apartmentPrice' => $request->input('apartmentPrice'),
+            'apartmentRatings' => $request->input('apartmentRatings'),
+            'apartmentAvailablefrom' => $request->input('apartmentAvailablefrom'),
+        ]);
+        if ($request->hasfile('apartmentImage')) {
+            foreach ($request->file('apartmentImage') as $image) {
+                $fileNameWithExt = $image->getClientOriginalName();
+                //get just file name
+                $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+                //get extension
+                $extension = $image->getClientOriginalExtension();
+                //filename to store
+                $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+                //image upload
+                $path = $image->storeAs('public/post_images', $fileNameToStore);
+                $room_image = RoomImages::create([
+                    'room_id' => $room->id,
+                    'image' => $fileNameToStore,
+                ]);
+            }
+        }
+        return ('room created B$$$$$$');
+
     }
 
     /**

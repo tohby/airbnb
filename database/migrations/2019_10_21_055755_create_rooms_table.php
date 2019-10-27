@@ -21,9 +21,9 @@ class CreateRoomsTable extends Migration
             $table->string('apartmentAmenities');
             $table->string('apartmentDescription');
             $table->string('apartmentRules');
-            $table->decimal('apartmentPrice');
-            $table->decimal('apartmentRatings');
-            $table->decimal('apartmentAvailablefrom');
+            $table->decimal('apartmentPrice')->nullable();
+            $table->integer('apartmentRatings')->nullable();
+            $table->date('apartmentAvailablefrom')->nullable();
             $table->mediumText('apartmentImage')->nullable();
             $table->timestamps();
         });
