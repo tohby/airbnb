@@ -1,51 +1,59 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: "Avenir Next";
     overflow: hidden;
 }
-.col-5.sectionImage{
+
+.col-5.sectionImage {
     height: 821px;
     background-image: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80');
     background-size: cover;
 }
 
-.col-5.sectionImage2{
+.col-5.sectionImage2 {
     height: 821px;
-    background-image: url('https://images.unsplash.com/photo-1551214538-82701c130e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80');
+    background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
     background-size: cover;
 }
 
-.col-7.LoginForm{
+.col-7.LoginForm {
     text-align: center;
-   padding: 150px 45px 50px 45px;
+    padding: 150px 45px 50px 45px;
 }
 
-.col-6.formarea{
+.col-6.formarea {
     margin-top: 60px;
     margin-left: 180px;
 }
-.myform{
+
+.myform {
     background: #f7f7f7;
     height: 45px;
     border: none;
 }
-.myform::placeholder{
+
+.myform::placeholder {
     font-size: 13px;
 }
-.col.loginbtn{
+
+.col.loginbtn {
     margin-left: -60px;
 }
-.col.forgotpassword p{
+
+.col.forgotpassword p {
     margin-left: 50px;
 }
-.row.Loginsocial{
+
+.row.Loginsocial {
     margin-top: 20px;
 }
+
 .col.sociallogin {
     margin: 0 0 0 -10px;
 }
-.col.sociallogin img{
+
+.col.sociallogin img {
     width: 30px;
     margin: 0 10px 0 10px;
 }

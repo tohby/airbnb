@@ -4,23 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <title>{{ config('app.name', 'Homey') }}</title>
-    
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">    
-    <link href="{{ asset('css/homey.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/homey.css') }}" rel="stylesheet">
 
 </head>
 
@@ -93,7 +93,7 @@
                 <a href="/dashboard"
                     class="{{ request()->is('dashboard') || request()->is('dashboard/*') ? 'active' : '' }}">
                     Dashboard</a>
-                <a href="/rooms" class="{{ request()->is('rooms') ? 'active' : '' }}"></i>Rooms</a>    
+                <a href="/rooms" class="{{ request()->is('rooms') ? 'active' : '' }}"></i>Rooms</a>
                 <a href="/profile"
                     class="{{ request()->is('profile/*') || request()->is('profile/*/edit') || request()->is('product/*') ? 'active' : '' }}"></i>Profile</a>
                 <a href="/news"
@@ -118,7 +118,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"
         integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous">
     </script>
-    
+
 </body>
 
 </html>

@@ -449,7 +449,7 @@
                     <h6 class="card-subtitle mb-2 text-muted">Starting from $79 at night</h6>
                     <p class="card-text">I am text block. Click edit button to change this text. Lorem ipsum dolor sit
                         amet, consectetur adipiscing elit.</p>
-                    <a href="/owner/register" class="btn HomeHotelLoadmore">Become a Owner</a>
+                    <a href="/owner/register" class="btn HomeHotelLoadmore">Become a Owner</a> <a href="/owner/register" class="btn HomeHotelLoadmore" style="margin-left:10px ">Login</a>
                 </div>
             </div>
         </div>

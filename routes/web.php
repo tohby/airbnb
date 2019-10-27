@@ -21,4 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/owner/register', function () {
     return view('auth/owner_register');
 });
-Route::get('/dashboard' , 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+//Route::po('/addroom', 'DashboardController@store')->name('addroom');
+Route::resource('/rooms', 'DashboardController');

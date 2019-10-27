@@ -1,91 +1,117 @@
-.sidenav {
-  height: 100%;
-  width: 270px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #101010;
-  overflow-x: hidden;
-  border: none;
-  padding-top: 10px;
-}
-
-.sidenav a {
-  padding: 10px 8px 12px 20px;
-  text-decoration: none;
-  letter-spacing: 1.5px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  display: block;
-  border: none;
-  border-radius: 5px;
-}
-
-.sidenav a:hover {
-  color: #fff;
-  background-color: rgba(241, 94, 117, 0.5);
-  border: none;
-}
-
-.sidenav a.active {
-  color: #fff;
-  background-color: #F15E75;
-  font-weight: 600;
-}
-
-.sidenav .navbar-brand {
-  padding: 10px 8px 12px 20px;
-}
-
-.navbar {
-  background-color: #FFF;
-  border-bottom: 1px solid #ECEEF4;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
 body {
-  background-color: #fbfbfd;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Avenir Next";
 }
 
-.transparent {
-  background-color: #fbfbfd;
+.breadcrumb {
+    background-color: white;
+    padding-left: 0px;
 }
 
-a:hover.navbar-brand {
-  border-left: none;
-  color: none !important;
-  background-color: transparent !important;
+.breadcrumb-item a {
+    color: black;
+    margin: 0 5px 0 10px;
 }
 
-main {
-  margin-top: 75px;
-  margin-left: 270px;
-  /* Same as the width of the sidenav */
-  /* padding: 0px 10px; */
+.bodycontent {
+    margin-top: 90px;
 }
 
-nav {
-  margin-left: 270px;
-  /* Same as the width of the sidenav */
+.col-7 h4 {
+    font-size: 32px;
+    font-weight: bolder;
+    color: #484848;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 769.5px) {
-  main {
-    margin-left: 0;
-  }
-
-  nav {
-    margin-left: 0;
-  }
+.col-7 {
+    padding-left: 25px;
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-
-.card-img-top {
-  width: 100%;
-  height: 30vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+.Badgesection {
+    height: 71px;
+    width: 625px;
+    margin: 50px 0 50px 0;
+    padding: 12px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(228, 228, 228) !important;
+    border-radius: 5px;
 }
 
+.col-2.Badgeimage {
+    padding: 0px 3px 14px 30px;
+}
+
+.addsection {
+    margin-top: 40px;
+}
+
+.myform {
+    height: 50px;
+    border: none;
+    border-width: 1px !important;
+    border-radius: 5px;
+    border-style: solid !important;
+    border-color: rgb(228, 228, 228) !important;
+}
+
+.form-group label {
+    font-size: 14px;
+}
+
+.myform::placeholder {
+    font-size: 13px;
+    color: rgb(138, 138, 138);
+}
+
+.col-4.Profile {
+    margin-left: 85px;
+}
+
+.ownerProfile {
+    border-width: 1px !important;
+    border-radius: 2px;
+    height: auto;
+    padding: 20px;
+    border-style: solid !important;
+    border-color: rgb(228, 228, 228) !important;
+}
+
+
+/* New dashboard */
+
+.navbar-brand img {
+    width: 80px;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-item a {
+    color: black;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+/* after header */
+
+.content {
+    margin-top: 80px;
+}
+
+.col.imageright {
+    width: 475px;
+    padding-top: 100px;
+    height: 600px;
+}
+
+.col.imageright img {
+    width: 475px;
+    border-radius: 5px;
+}

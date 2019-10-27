@@ -1,6 +1,5 @@
 //import variables
 @import 'variables';
-
 .sidenav {
     height: 100%;
     width: 270px;
@@ -28,7 +27,7 @@
         background-color: $pink-5;
         border: none;
     }
-    a.active{
+    a.active {
         color: #fff;
         background-color: $pink;
         font-weight: 600;
@@ -36,43 +35,50 @@
     .navbar-brand {
         padding: 10px 8px 12px 20px;
     }
-  }
+}
 
-  .navbar {
+.navbar {
     background-color: #FFF;
     border-bottom: 1px solid #ECEEF4;
-  }
+}
 
-  body{
+body {
     background-color: #fbfbfd;
-  }
+}
 
-  .transparent{
+.transparent {
     background-color: #fbfbfd;
-  }
+}
 
-   a:hover.navbar-brand {
+a:hover.navbar-brand {
     border-left: none;
     color: none !important;
     background-color: transparent !important;
-  }
+}
 
-  main {
+main {
     margin-top: 75px;
-    margin-left: 270px; /* Same as the width of the sidenav */
+    margin-left: 270px;
+    /* Same as the width of the sidenav */
     /* padding: 0px 10px; */
-  }
+}
 
-  nav{
-    margin-left: 270px; /* Same as the width of the sidenav */
-  }
+nav {
+    margin-left: 270px;
+    /* Same as the width of the sidenav */
+}
 
-  @media screen and (max-width: 769.5px) {
-    main {margin-left: 0;}
-    nav {margin-left: 0;}
-  }
+@media screen and (max-width: 769.5px) {
+    main {
+        margin-left: 0;
+    }
+    nav {
+        margin-left: 0;
+    }
+}
 
-  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 
 .card-img-top {
     width: 100%;

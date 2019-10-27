@@ -13,8 +13,18 @@ class CreateRoomsTable extends Migration
      */
     public function up()
     {
+
         Schema::create('rooms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('apartmentName');
+            $table->string('apartmentAddress');
+            $table->string('apartmentAmenities');
+            $table->string('apartmentDescription');
+            $table->string('apartmentRules');
+            $table->decimal('apartmentPrice');
+            $table->decimal('apartmentRatings');
+            $table->decimal('apartmentAvailablefrom');
+            $table->mediumText('apartmentImage')->nullable();
             $table->timestamps();
         });
     }
