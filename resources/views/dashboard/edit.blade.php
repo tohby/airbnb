@@ -51,52 +51,53 @@
                             </div>
                         </div>
                         <div class="addsection">
-                            <form action="{{action("RoomController@store")}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{action("RoomController@edit")}}" method="POST" enctype="multipart/form-data">
+                                {{@method_field('PATCH')}}
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Apartment Name</label>
-                                        <input type="text" class="form-control myform" id="inputEmail4" placeholder="Hotel Califonia" name="apartmentName">
+                                        <input type="text" class="form-control myform" id="inputEmail4" placeholder="Hotel Califonia" name="apartmentName" value="{{$room->apartmentName}}">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Apartment Address</label>
-                                        <input type="text" class="form-control myform" id="inputPassword4" placeholder="Lagos, Nigeria" name="apartmentAddress">
+                                        <input type="text" class="form-control myform" id="inputPassword4" placeholder="Lagos, Nigeria" name="apartmentAddress" value="{{$room->apartmentAddress}}>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputState">Apartment Amenities</label>
-                                    <select id="Details" class="form-control myform" name="apartmentAmenities">
+                                    <select id="Details" class="form-control myform" name="apartmentAmenities" value="{{$room->apartmentAmenities}}>
                                         <option selected>Select</option>
                                         <option>Condo</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress2">Apartment Rules</label>
-                                    <input type="text" class="form-control myform" id="inputAddress2" placeholder="Apartment, studio, or floor" name="apartmentRules">
+                                    <input type="text" class="form-control myform" id="inputAddress2" placeholder="Apartment, studio, or floor" name="apartmentRules" value="{{$room->apartmentRules}}>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress2">Apartment Description</label>
-                                    <textarea type="text" class="form-control myform" id="inputAddress" placeholder="This Room is .." style="height: 200px" name="apartmentDescription"></textarea>
+                                    <textarea type="text" class="form-control myform" id="inputAddress" placeholder="This Room is .." style="height: 200px" name="apartmentDescription" value="{{$room->apartmentDescription}}></textarea>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputCity">Price in USD</label>
-                                        <input type="text" class="form-control myform" id="inputCity" name="apartmentPrice">
+                                        <input type="text" class="form-control myform" id="inputCity" name="apartmentPrice" value="{{$room->apartmentPrice}}>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="inputState">Available From</label>
-                                        <input type="text" class="form-control myform" id="inputCity" name="apartmentAvailablefrom">
+                                        <input type="text" class="form-control myform" id="inputCity" name="apartmentAvailablefrom" value="{{$room->apartmentAvailablefrom}}>
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label for="inputZip">Ratings</label>
-                                        <input type="text" class="form-control myform" id="inputZip" name="apartmentRatings">
+                                        <input type="text" class="form-control myform" id="inputZip" name="apartmentRatings" value="{{$room->apartmentRatings}}>
                                     </div>
                                 </div>
 
                                 <P style="margin-top: 30px">Cancellation Policy</P>
                                 <p>Free cancellation for 48 hours. After that, cancel before 3:00PM on Jul 19 and get a 50% refund, minus the service fee.
                                     Free cancellation for 48 hours. After that, cancel before 3:00PM on Jul 19 and get a 50% refund, minus the service fee.</p>
-                                    <input type="file" class="btn" style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;" name="apartmentImage[]" multiple>
+                                    <input type="file" class="btn" style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;" name="apartmentImage[]" multiple >
                                 <button type="submit" class="btn" style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;">Sign in</button>
                             </form>
                         </div>

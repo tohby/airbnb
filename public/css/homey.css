@@ -27,6 +27,13 @@ body {
     margin-bottom: 20px;
 }
 
+.col.myrooms h4 {
+    font-size: 32px;
+    font-weight: bolder;
+    color: #484848;
+    margin-bottom: 40px;
+}
+
 .col-7 {
     padding-left: 25px;
 }
@@ -114,4 +121,71 @@ body {
 .col.imageright img {
     width: 475px;
     border-radius: 5px;
+}
+
+
+/*
+ROOM CARD CSS STARTS */
+
+.HotelCard {
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 40px 0 rgba(162, 162, 162, 0.11);
+}
+
+.FeaturedProperty {
+    position: absolute;
+    margin: 15px 0 0 15px;
+}
+
+.Price {
+    position: absolute;
+    margin: 200px 0 0 15px;
+}
+
+.FeaturedBtn.col {
+    background-color: #54c4d9;
+    color: white;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 4px 9px 4px 9px;
+}
+
+.HotelPricing.col {
+    color: white;
+    margin-right: 130px;
+}
+
+.Hostimg.col img {
+    width: 40px;
+    margin-top: -25px;
+    border-radius: 360px;
+    border: thin solid white;
+}
+
+.CardBody.col {}
+
+.CardBody.col h5 {
+    font-size: 16px;
+}
+
+.CardBody.col p {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #949ca5;
+}
+
+.RoomProperty.row {
+    color: #000000;
+    font-size: 14px;
+}
+
+.HotelStarRating {
+    color: orange;
+    margin-top: 15px;
+    margin-left: 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
