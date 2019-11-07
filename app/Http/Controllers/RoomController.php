@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Room;
 use App\RoomImages;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RoomController extends Controller
 {
@@ -15,7 +16,6 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
         //
         $rooms  = Room::all()->toArray();
         return view('dashboard.ViewRooms', compact('rooms'));
@@ -52,6 +52,7 @@ class RoomController extends Controller
             'apartmentPrice' => $request->input('apartmentPrice'),
             'apartmentRatings' => $request->input('apartmentRatings'),
             'apartmentAvailablefrom' => $request->input('apartmentAvailablefrom'),
+            'user_id' => Auth::id(),
         ]);
         if ($request->hasfile('apartmentImage')) {
             foreach ($request->file('apartmentImage') as $image) {

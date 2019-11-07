@@ -31,4 +31,5 @@ Route::get('/owner/register', function () {
 
 Route::resource('/rooms', 'RoomController');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/my-rooms', 'MyRoomsController@index');
 Route::Post('/dashboard', 'DashboardController@show')->name('dashboard');
