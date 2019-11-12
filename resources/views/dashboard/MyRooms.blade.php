@@ -9,6 +9,7 @@
             <div class="addsection">
                 {{-- roomstarthere --}}
                 <div class="row">
+                    @foreach ($rooms as $room)
                     <div class="col-4">
                         <div class="card HotelCard" style="width: 21.6rem;">
                             <div class="row FeaturedProperty">
@@ -34,7 +35,7 @@
                                     {{-- @foreach($rooms as $room) --}}
 
                                     <div class="col CardBody">
-                                        <h5>Trump Towner Hanoi</h5>
+                                        <h5>{{$room->apartmentName}}</h5>
                                         <p>53B, block 343, Newyork city</p>
                                         <div class="row RoomProperty">
                                             <div class="col-5" style="padding-right:-40px"><i class="fas fa-shower"></i>
@@ -63,6 +64,7 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
 
                 {{-- roomsends here  --}}

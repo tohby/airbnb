@@ -31,7 +31,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/rooms">Add New Room</a></li>
-                    <li class="breadcrumb-item"><a href="#">My Rooms</a></li>
+                    <li class="breadcrumb-item"><a href="/my-rooms">My Rooms</a></li>
                     <li class="breadcrumb-item"><a href="#">View Orders</a></li>
                     <li class="breadcrumb-item"><a href="#">Profile</a></li>
                 </ol>
