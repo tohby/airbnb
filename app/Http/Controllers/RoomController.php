@@ -111,7 +111,7 @@ class RoomController extends Controller
             'apartmentAddress' => 'required',
             'apartmentPrice'  => 'required',
         ]);
-        $room = Room::create([
+        $room = Room::update([
             'apartmentName' => $request->input('apartmentName'),
             'apartmentAddress' => $request->input('apartmentAddress'),
             'apartmentAmenities' => $request->input('apartmentAmenities'),
