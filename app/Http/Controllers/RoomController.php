@@ -71,7 +71,7 @@ class RoomController extends Controller
                 ]);
             }
         }
-        return view('dashboard/ViewRooms');
+        return redirect('/my-rooms');
     }
 
     /**

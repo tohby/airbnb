@@ -11,6 +11,9 @@ class MyRoomsController extends Controller
 {
     //
     public function index(){
-        return view('dashboard/myrooms');
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        
+        return view('dashboard/myrooms')->with('rooms', $user->rooms);
     }
 }
