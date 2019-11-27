@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="addsection">
-                <form action="{{action("RoomController@edit")}}" method="POST" enctype="multipart/form-data">
+                <form action="{{action("RoomController@update", "$room->id" )}}" method="POST" enctype="multipart/form-data">
                     {{@method_field('PATCH')}}
                     @csrf
                     <div class="form-row">
@@ -76,12 +76,12 @@
                         minus the service fee.
                         Free cancellation for 48 hours. After that, cancel before 3:00PM on Jul 19 and get a 50% refund,
                         minus the service fee.</p>
-                    <input type="file" class="btn"
-                        style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;"
-                        name="apartmentImage[]" multiple>
+                        <div class="custom-file mb-3">
+                            <input type="file" class="custom-file-input" name="apartmentImage[]" multiple>
+                            <label class="custom-file-label" for="customFile">Choose image files</label>
+                        </div>
                     <button type="submit" class="btn"
-                        style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;">Sign
-                        in</button>
+                        style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;">Update</button>
                 </form>
             </div>
         </div>

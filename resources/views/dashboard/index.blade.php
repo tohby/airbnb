@@ -22,12 +22,12 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Apartment Name</label>
-                                <input type="text" class="form-control myform" id="inputEmail4"
+                                <input type="text" class="form-control myform"
                                     placeholder="Hotel Califonia" name="apartmentName">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Apartment Address</label>
-                                <input type="text" class="form-control myform" id="inputPassword4"
+                                <input type="text" class="form-control myform"
                                     placeholder="Lagos, Nigeria" name="apartmentAddress">
                             </div>
                         </div>
@@ -40,26 +40,26 @@
                         </div>
                         <div class="form-group">
                             <label for="inputAddress2">Apartment Rules</label>
-                            <input type="text" class="form-control myform" id="inputAddress2"
+                            <input type="text" class="form-control myform"
                                 placeholder="Apartment, studio, or floor" name="apartmentRules">
                         </div>
                         <div class="form-group">
                             <label for="inputAddress2">Apartment Description</label>
-                            <textarea type="text" class="form-control myform" id="inputAddress"
+                            <textarea type="text" class="form-control myform" 
                                 placeholder="This Room is .." style="height: 200px" name="apartmentDescription"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputCity">Price in USD</label>
-                                <input type="text" class="form-control myform" id="inputCity" name="apartmentPrice">
+                                <input type="number" class="form-control myform" name="apartmentPrice" min="1" required>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputState">Available From</label>
-                                <input type="text" class="form-control myform" id="inputCity" name="apartmentAvailablefrom">
+                                <input type="date" class="form-control myform" name="apartmentAvailablefrom">
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="inputZip">Ratings</label>
-                                <input type="text" class="form-control myform" id="inputZip" name="apartmentRatings">
+                                <input type="number" class="form-control myform" name="apartmentRatings">
                             </div>
                         </div>
     
@@ -68,12 +68,12 @@
                             minus the service fee.
                             Free cancellation for 48 hours. After that, cancel before 3:00PM on Jul 19 and get a 50% refund,
                             minus the service fee.</p>
-                        <input type="file" class="btn"
-                            style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;"
-                            name="apartmentImage[]" multiple>
+                        <div class="custom-file mb-3">
+                            <input type="file" class="custom-file-input" name="apartmentImage[]" multiple>
+                            <label class="custom-file-label" for="customFile">Choose image files</label>
+                        </div>
                         <button type="submit" class="btn"
-                            style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;">Sign
-                            in</button>
+                            style="width: 120px;background: rgb(255, 90, 95) !important; color: white; margin-buttom: 50px;">Submit</button>
                     </form>
                 </div>
             </div>

@@ -111,16 +111,7 @@ class RoomController extends Controller
             'apartmentAddress' => 'required',
             'apartmentPrice'  => 'required',
         ]);
-        $room = Room::update([
-            'apartmentName' => $request->input('apartmentName'),
-            'apartmentAddress' => $request->input('apartmentAddress'),
-            'apartmentAmenities' => $request->input('apartmentAmenities'),
-            'apartmentDescription' => $request->input('apartmentDescription'),
-            'apartmentRules' => $request->input('apartmentRules'),
-            'apartmentPrice' => $request->input('apartmentPrice'),
-            'apartmentRatings' => $request->input('apartmentRatings'),
-            'apartmentAvailablefrom' => $request->input('apartmentAvailablefrom'),
-        ]);
+        
         if ($request->hasfile('apartmentImage')) {
             foreach ($request->file('apartmentImage') as $image) {
                 $fileNameWithExt = $image->getClientOriginalName();

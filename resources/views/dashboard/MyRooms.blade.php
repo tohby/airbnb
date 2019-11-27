@@ -18,11 +18,11 @@
                                 </div>
                             </div>
                             <img class="card-img-top"
-                                src="https://demo01.gethomey.io/wp-content/uploads/2018/10/15-2-750x500.jpg"
+                                src="/storage/post_images/{{$room->images[0]->image}}"
                                 alt="Card image cap">
                             <div class="row Price">
                                 <div class="col HotelPricing">
-                                    <h5>$500/<small style="font-size: 15px; font-weight: bold">night</small></h5>
+                                    <h5>${{$room->apartmentPrice}}/<small style="font-size: 11px; font-weight: bold">night</small></h5>
                                 </div>
                                 <div class="col Hostimg">
                                     <img
@@ -36,7 +36,7 @@
 
                                     <div class="col CardBody">
                                         <h5>{{$room->apartmentName}}</h5>
-                                        <p>53B, block 343, Newyork city</p>
+                                        <p>{{$room->apartmentAddress}}</p>
                                         <div class="row RoomProperty">
                                             <div class="col-5" style="padding-right:-40px"><i class="fas fa-shower"></i>
                                                 2 Bathrooms</div>
@@ -54,8 +54,8 @@
                                                 </div>
                                             </div>
                                             <div class="col" style="margin:15px 0 12px 10px; padding-left: 37px;">
-                                                <i class="fas fa-trash-alt" style="margin-right:15px"></i>
-                                                <i class="fas fa-pencil-alt"></i>
+                                            <a href="/rooms/{{$room->id}}/edit"><i class="fas fa-trash-alt" style="margin-right:15px"></i></a>
+                                            <a href="/rooms/{{$room->id}}/edit"><i class="fas fa-pencil-alt"></i></a>
                                             </div>
                                         </div>
                                     </div>
