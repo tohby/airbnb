@@ -50,8 +50,7 @@
                     <div class=" form-group">
                         <label for="inputAddress2">Apartment Description</label>
                         <textarea type="text" class="form-control myform" id="inputAddress"
-                            placeholder="This Room is .." style="height: 200px" name="apartmentDescription"
-                            value="{{$room->apartmentDescription}}"></textarea>
+                            placeholder="This Room is .." style="height: 200px" name="apartmentDescription">{{$room->apartmentDescription}}</textarea>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
