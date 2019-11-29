@@ -17,17 +17,14 @@
                                     FEATURES
                                 </div>
                             </div>
-                            <img class="card-img-top"
-                                src="/storage/post_images/{{$room->images[0]->image}}"
+                            <img class="card-img-top" src="/storage/post_images/{{$room->images[0]->image}}"
                                 alt="Card image cap">
                             <div class="row Price">
                                 <div class="col HotelPricing">
-                                    <h5>${{$room->apartmentPrice}}/<small style="font-size: 11px; font-weight: bold">night</small></h5>
+                                    <h5>${{$room->apartmentPrice}}/<small
+                                            style="font-size: 11px; font-weight: bold">night</small></h5>
                                 </div>
-                                <div class="col Hostimg">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1415&q=80">
-                                </div>
+
                             </div>
 
                             <div class="card-body">
@@ -44,7 +41,7 @@
                                                 Bedroom</div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-8">
+                                            <div class="col-6">
                                                 <div class="HotelStarRating" style="margin-left:-5px">
                                                     <i class="fas fa-star starcolor"></i>
                                                     <i class="fas fa-star starcolor"></i>
@@ -53,9 +50,23 @@
                                                     <a href="#" style="color: #949ca5">Very Good</a>
                                                 </div>
                                             </div>
-                                            <div class="col" style="margin:15px 0 12px 10px; padding-left: 37px;">
-                                            <a href="/rooms/{{$room->id}}/edit"><i class="fas fa-trash-alt" style="margin-right:15px"></i></a>
-                                            <a href="/rooms/{{$room->id}}/edit"><i class="fas fa-pencil-alt"></i></a>
+                                            <div class="col-6">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <form action="{{action("RoomController@destroy", "$room->id")}}"
+                                                            method="POST">
+                                                            @csrf
+                                                            <input type="hidden" name="_method" value="delete" />
+                                                            <button type="submit" class="btn btn-link text-danger"><i
+                                                                    class="fas fa-trash-alt"
+                                                                    style="margin-right:15px"></i></button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="/rooms/{{$room->id}}/edit" class="text-primary"><i
+                                                                class="fas fa-pencil-alt"></i></a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

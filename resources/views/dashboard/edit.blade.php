@@ -55,12 +55,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCity">Price in USD</label>
-                            <input type="text" class="form-control myform" id="inputCity" name="apartmentPrice"
+                            <input type="number" class="form-control myform" id="inputCity" name="apartmentPrice"
                                 value="{{$room->apartmentPrice}}">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputState">Available From</label>
-                            <input type="text" class="form-control myform" id="inputCity" name="apartmentAvailablefrom"
+                            <input type="date" class="form-control myform" id="inputCity" name="apartmentAvailablefrom"
                                 value="{{$room->apartmentAvailablefrom}}">
                         </div>
                         <div class="form-group col-md-2">

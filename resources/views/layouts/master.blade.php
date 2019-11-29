@@ -41,6 +41,9 @@
     </div>
 
     <section class="bodycontent my-5">
+        <div class="container">
+            @include('layouts/messages')
+        </div>
         @yield('content')
     </section>
 <script>

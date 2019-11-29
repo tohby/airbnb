@@ -71,7 +71,7 @@ class RoomController extends Controller
                 ]);
             }
         }
-        return redirect('/my-rooms');
+        return redirect('/my-rooms')->with('success', 'The room was added!');
     }
 
     /**
@@ -111,7 +111,14 @@ class RoomController extends Controller
             'apartmentAddress' => 'required',
             'apartmentPrice'  => 'required',
         ]);
-        
+        $room->apartmentName = $request->input('apartmentName');
+        $room->apartmentAddress = $request->input('apartmentAddress');
+        $room->apartmentAmenities = $request->input('apartmentAmenities');
+        $room->apartmentDescription = $request->input('apartmentDescription');
+        $room->apartmentRules = $request->input('apartmentRules');
+        $room->apartmentPrice = $request->input('apartmentPrice');
+        $room->apartmentRatings = $request->input('apartmentRatings');
+        $room->apartmentAvailableFrom = $request->input('apartmentAvailableFrom');
         if ($request->hasfile('apartmentImage')) {
             foreach ($request->file('apartmentImage') as $image) {
                 $fileNameWithExt = $image->getClientOriginalName();
@@ -129,8 +136,8 @@ class RoomController extends Controller
                 ]);
             }
         }
-
-        return view('dashboard/ViewRooms');
+        $room->save();
+        return redirect('/my-rooms')->with('success', 'The room was updated!');
     }
 
     /**
@@ -142,5 +149,8 @@ class RoomController extends Controller
     public function destroy(Room $room)
     {
         //
+        $room = Room::find($room->id);
+        $room->delete();
+        return redirect('/my-rooms')->with('success', "Room has been removed");
     }
 }
