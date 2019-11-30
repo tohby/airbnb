@@ -13,8 +13,7 @@
 
 use App\Http\Controllers\MyRoomsController;
 
-Route::get('/', 'MyRoomsController@usersRooms'() {
-);
+Route::get('/', 'MyRoomsController@usersRooms');
 
 Auth::routes();
 
