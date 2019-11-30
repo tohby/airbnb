@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+use App\Http\Controllers\MyRoomsController;
+
+Route::get('/', 'MyRoomsController@usersRooms'() {
+);
 
 Auth::routes();
 

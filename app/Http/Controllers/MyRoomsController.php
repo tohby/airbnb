@@ -10,10 +10,17 @@ use Illuminate\Support\Facades\Auth;
 class MyRoomsController extends Controller
 {
     //
-    public function index(){
+    public function index()
+    {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        
+
         return view('dashboard/myrooms')->with('rooms', $user->rooms);
+    }
+
+    public function usersRooms()
+    {
+        $rooms = Room::get('Rooms')->get();
+        return view('index', ['rooms' => $rooms]);
     }
 }
