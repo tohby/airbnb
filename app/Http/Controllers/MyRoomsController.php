@@ -20,7 +20,7 @@ class MyRoomsController extends Controller
 
     public function usersRooms()
     {
-        $rooms = Room::get('Rooms')->get();
+        $rooms = Room::get()->get();
         return view('index', ['rooms' => $rooms]);
     }
 }
