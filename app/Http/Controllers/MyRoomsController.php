@@ -21,6 +21,6 @@ class MyRoomsController extends Controller
     public function usersRooms()
     {
         $rooms = Room::get();
-        return view('index', ['rooms' => $rooms]);
+        return view('index')->with('rooms', $rooms);
     }
 }
