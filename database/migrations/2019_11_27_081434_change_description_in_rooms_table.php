@@ -27,7 +27,7 @@ class ChangeDescriptionInRoomsTable extends Migration
     {
         Schema::table('rooms', function (Blueprint $table) {
             //change from string to longtext
-            $table->mediumText('apartmentDescription')->change();
+            $table->londText('apartmentDescription')->change();
         });
     }
 }

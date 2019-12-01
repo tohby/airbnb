@@ -11,9 +11,11 @@
 |
 */
 
-use App\Http\Controllers\MyRoomsController;
+use App\Htp\Controllers\MyRoomsController;
 
 Route::get('/', 'MyRoomsController@usersRooms');
+Route::get('/Sortroom', 'MyRoomsController@RoomsSort')->name('Sortroom');
+Route::get('/roomDetails', 'MyRoomsController@roomDetails')->name('roomDetails');
 
 Auth::routes();
 

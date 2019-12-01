@@ -35,7 +35,9 @@
                             <label for="inputState">Apartment Amenities</label>
                             <select id="Details" class="form-control myform" name="apartmentAmenities">
                                 <option selected>Select</option>
-                                <option>Condo</option>
+                                <option>3 RestRoom</option>
+                                <option>2 RestRoom</option>
+                                <option>1 RestRoom</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -45,7 +47,7 @@
                         </div>
                         <div class="form-group">
                             <label for="inputAddress2">Apartment Description</label>
-                            <textarea type="text" class="form-control myform" 
+                            <textarea type="text" class="form-control myform"
                                 placeholder="This Room is .." style="height: 200px" name="apartmentDescription"></textarea>
                         </div>
                         <div class="form-row">
@@ -62,7 +64,7 @@
                                 <input type="number" class="form-control myform" name="apartmentRatings">
                             </div>
                         </div>
-    
+
                         <P style="margin-top: 30px">Cancellation Policy</P>
                         <p>Free cancellation for 48 hours. After that, cancel before 3:00PM on Jul 19 and get a 50% refund,
                             minus the service fee.
@@ -119,7 +121,7 @@
                         <i class="fas fa-star" style="color: orangered ; font-size: 12px"></i>
                         <i class="fas fa-star" style="color: orangered ; font-size: 12px"></i>
                     </div>
-    
+
                 </div>
             </div>
         </div>

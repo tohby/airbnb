@@ -23,4 +23,15 @@ class MyRoomsController extends Controller
         $rooms = Room::get();
         return view('index')->with('rooms', $rooms);
     }
+    public function RoomsSort()
+    {
+        $rooms = Room::get();
+        return view('Sortroom')->with('rooms', $rooms);
+    }
+
+    public function roomDetails()
+    {
+        $rooms = Room::get();
+        return view('roomDetails')->with('rooms', $rooms);
+    }
 }

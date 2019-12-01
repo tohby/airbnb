@@ -38,7 +38,7 @@
             <p> Hand-picked selection of quality places</p>
         </div>
         <div class="row">
-        @foreach ($errors as $room)
+        @foreach ($rooms as $room)
             <div class="col">
                 <div class="card HotelCard" style="width: 21.6rem;">
                     <div class="row FeaturedProperty">
@@ -47,27 +47,27 @@
                         </div>
                     </div>
                     <img class="card-img-top"
-                        src="https://demo01.gethomey.io/wp-content/uploads/2018/10/15-2-750x500.jpg"
+                    src="/storage/post_images/{{$room->images[0]->image}}"
                         alt="Card image cap">
                     <div class="row Price">
                         <div class="col HotelPricing">
-                            <h5>$${{$room->apartmentPrice}}<small style="font-size: 15px; font-weight: bold">night</small></h5>
+                            <h5 style="margin-left:-5px">${{$room->apartmentPrice}}<small style="font-size: 15px; font-weight: bold">night</small></h5>
                         </div>
-                        <div class="col Hostimg">
-                            <img
-                            src="/storage/post_images/{{$room->images[0]->image}}">
-                        </div>
+                        {{-- <div class="col Hostimg">
+                            <img src="https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1415&q=80">
+                        </div> --}}
                     </div>
 
                     <div class="card-body">
                         <div class="row">
                             <div class="col CardBody">
+                                <a href="{{ URL::route('roomDetails') }}" style="color:black">
                                     <h5>{{$room->apartmentName}}</h5>
+                                </a>
                                     <p>{{$room->apartmentAddress}}</p>
                                 <div class="row RoomProperty">
-                                    <div class="col-5" style="padding-right:-40px"><i class="fas fa-shower"></i> 2
-                                        Bathrooms</div>
-                                    <div class="col-5" style="margin-left: -23px"><i class="fas fa-bed"></i> 3 Bedroom
+                                    <div class="col-5" style="padding-right:-40px"><i class="fas fa-shower"></i> {{$room->apartmentAmenities}}</div>
+                                    <div class="col-5" style="margin-left: -23px"><i class="fas fa-bed"></i> {{$room->apartmentRules}}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -76,7 +76,7 @@
                                         <i class="fas fa-star starcolor"></i>
                                         <i class="fas fa-star starcolor"></i>
                                         <i class="fas fa-star starcolor"></i>
-                                        <a href="#" style="color: #949ca5">Strong {{$room->apartmentRatings}}</a>
+                                        <a href="#" style="color: #949ca5">Strong{{$room->apartmentRatings}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +90,8 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <button type="button" class="btn HomeHotelLoadmore">Load More</button>
+
+            <a href="{{ URL::route('Sortroom') }}" class="btn HomeHotelLoadmore"> Load More</a>
         </div>
     </div>
     <div class="section TopDestination">

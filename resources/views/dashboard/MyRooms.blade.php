@@ -47,10 +47,11 @@
                                                     <i class="fas fa-star starcolor"></i>
                                                     <i class="fas fa-star starcolor"></i>
                                                     <i class="fas fa-star starcolor"></i>
-                                                    <a href="#" style="color: #949ca5">Very Good</a>
+                                                    <a href="#" style="color: #949ca5">Good</a>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-6" style="
+                                            margin-top: 5px;">
                                                 <div class="row">
                                                     <div class="col">
                                                         <form action="{{action("RoomController@destroy", "$room->id")}}"
@@ -59,10 +60,12 @@
                                                             <input type="hidden" name="_method" value="delete" />
                                                             <button type="submit" class="btn btn-link text-danger"><i
                                                                     class="fas fa-trash-alt"
-                                                                    style="margin-right:15px"></i></button>
+                                                                    style="margin-right:0px"></i></button>
                                                         </form>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col" style="
+                                                    padding-left: 66px;
+                                                    padding-top: 8px;">
                                                         <a href="/rooms/{{$room->id}}/edit" class="text-primary"><i
                                                                 class="fas fa-pencil-alt"></i></a>
                                                     </div>
