@@ -121,7 +121,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control myform" id="inputAddress2" placeholder="Main guest Name" name="mainguestName">
+                                    <input type="text" class="form-control myform" id="inputAddress2" value="{{Auth::user()->name}}" name="mainguestName">
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control myform" id="inputAddress" name="descriptions" placeholder="Description About yourself" style="height: 100px"></textarea>
