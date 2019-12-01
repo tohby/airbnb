@@ -81,6 +81,11 @@
     </div>
 
     <main>
+        <div class="py-5">
+            <div class="container">
+                @include('layouts/messages')
+            </div>
+        </div>
         @yield('content')
     </main>
 </body>

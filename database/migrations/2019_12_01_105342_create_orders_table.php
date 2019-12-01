@@ -17,6 +17,9 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->date('arrival');
             $table->date('departure');
+            $table->string('guests');
+            $table->string('mainguestName');
+            $table->string('descriptions');
             $table->timestamps();
         });
     }

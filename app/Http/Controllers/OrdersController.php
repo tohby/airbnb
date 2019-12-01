@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Orders;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrdersController extends Controller
 {
@@ -14,7 +15,9 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
+
+        $orders = Orders::get();
+        return view('/Bookings');
     }
 
     /**
@@ -35,7 +38,20 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'arrival' => 'required',
+            'departure' => 'required',
+            'guests'  => 'required',
+        ]);
+        $order = Orders::create([
+            'arrival' => $request->input('arrival'),
+            'departure' => $request->input('departure'),
+            'guests' => $request->input('guests'),
+            'mainguestName' => $request->input('mainguestName'),
+            'descriptions' => $request->input('descriptions'),
+            'user_id' => Auth::id(),
+        ]);
+        return redirect('/Bookings');
     }
 
     /**

@@ -100,26 +100,31 @@
                     </div>
                     <div class="row">
                         <div class="col Instantform">
-                            <form>
+                            <form action="{{action("OrdersController@store")}}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <input type="date" class="form-control myform" name="arrival" placeholder="Arrival ">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="date" class="form-control myform" id="departure" placeholder="Departure">
+                                        <input type="date" class="form-control myform"  name="departure" placeholder="Departure">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <select id="Details" class="form-control myform">
+                                    <select id="Details" name="guests" class="form-control myform">
                                         <option selected>Persons</option>
-                                        <option>Condo</option>
+                                        <option>1 Guest</option>
+                                        <option>2 Guest</option>
+                                        <option>3 Guest</option>
+                                        <option>4 Guest</option>
+                                        <option>5 Guest</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control myform" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                    <input type="text" class="form-control myform" id="inputAddress2" placeholder="Main guest Name" name="mainguestName">
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control myform" id="inputAddress" placeholder="Description About yourself" style="height: 100px"></textarea>
+                                    <textarea class="form-control myform" id="inputAddress" name="descriptions" placeholder="Description About yourself" style="height: 100px"></textarea>
                                 </div>
                                 <button type="submit" class="btn" style="width: 310px; height:50px; background: rgb(255, 90, 95) !important; color: white">Book Now</button>
                             </form>
