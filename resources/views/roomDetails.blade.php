@@ -98,14 +98,13 @@
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <input type="email" class="form-control myform" id="inputEmail4" placeholder="Arrival ">
+                                        <input type="date" class="form-control myform" name="arrival" placeholder="Arrival ">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="password" class="form-control myform" id="inputPassword4" placeholder="Departure">
+                                        <input type="date" class="form-control myform" id="departure" placeholder="Departure">
                                     </div>
                                 </div>
                                 <div class="form-group">
-
                                     <select id="Details" class="form-control myform">
                                         <option selected>Persons</option>
                                         <option>Condo</option>
