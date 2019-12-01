@@ -76,7 +76,7 @@
                                         <i class="fas fa-star starcolor"></i>
                                         <i class="fas fa-star starcolor"></i>
                                         <i class="fas fa-star starcolor"></i>
-                                        <a href="#" style="color: #949ca5">Strong{{$room->apartmentRatings}}</a>
+                                        <a href="#" style="color: #949ca5">{{$room->apartmentRatings}}</a>
                                     </div>
                                 </div>
                             </div>
