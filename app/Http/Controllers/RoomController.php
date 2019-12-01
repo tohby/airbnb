@@ -83,7 +83,8 @@ class RoomController extends Controller
     public function show($id)
     {
         $room = Room::find($id);
-        return view('roomDetails')->with('room', $room);
+        $featured = featured::orderByRaw('RAND()')->take(1)->get();
+        return view('roomDetails')->with('room', $room)->with('featured', $featured);
     }
 
     /**
