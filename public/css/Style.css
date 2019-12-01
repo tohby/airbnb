@@ -234,7 +234,7 @@ body {
 /*Propertypage*/
 
 .jumbotron.gallery {
-    background-image: url('https://images.unsplash.com/photo-1488901512066-cd403111aeb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80');
+    /* background-image: url('https://images.unsplash.com/photo-1488901512066-cd403111aeb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80'); */
     background-size: cover;
     height: 500px;
     margin-bottom: 30px;

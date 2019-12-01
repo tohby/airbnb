@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="HotelInfo">
+        <style>
+           .jumbotron.gallery{
+                background-image: url('/storage/post_images/{{$room->images[0]->image}}')
+            }
+        </style>
         <div class="jumbotron gallery">
             <div class="container">
             </div>
@@ -145,15 +150,15 @@
                         <img src="https://demo01.gethomey.io/wp-content/uploads/2018/10/HomeyHost08-150x150.jpg">
                     </div>
                     <div class="col HostName">
-                        <h5>Modern Apartment With Pool</h5>
+                        <h5>{{$room->user->name}}</h5>
                         <p style="font-size: 12px"> <i class="fas fa-medal" style="font-size: 12px; color: #F15E75"></i> Gold <i class="fas fa-map-marker-alt" style="margin-right: 5px; margin-left: 5px; font-size: 12px"></i>984 1st Avenue, New York</p>
                     </div>
                 </div>
                 <hr>
                 <div class="row" style="margin-top: 30px">
                     <div class="col">
-                        <h5 style="font-size: 14px">Languages</h5>
-                        <p style="font-size: 12px">English, Yoruba, Spanish</p>
+                        <h5 style="font-size: 14px">Contact</h5>
+                    <p style="font-size: 12px">{{$room->user->email}}</p>
                     </div>
                     <div class="col">
                         <h5 style="font-size: 14px">Profile Status</h5>
@@ -179,8 +184,8 @@
                         <img src="https://demo01.gethomey.io/wp-content/uploads/2018/10/01-5-750x500.jpg">
                     </div>
                     <div class="col SimilarRoomsDetails">
-                        <h6 style="font-size: 16px">Modern Apartment With Pool</h6>
-                        <p style="font-size: 14px">984 1st Avenue, New York, NY 10022</p>
+                        <h6 style="font-size: 16px">{{$room->apartmentName}}</h6>
+                        <p style="font-size: 14px">{{$room->apartmentAddress}}</p>
 
                         <div class="row RoomProperty">
                             <div class="col-5" style="padding-right: -40px"><i class="fas fa-shower"></i> 2 Bathrooms</div>

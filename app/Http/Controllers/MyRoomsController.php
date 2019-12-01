@@ -32,6 +32,7 @@ class MyRoomsController extends Controller
     public function roomDetails()
     {
         $rooms = Room::get();
+        $featured = featured::orderByRaw('RAND()')->take(1)->get();
         return view('roomDetails')->with('rooms', $rooms);
     }
 }
