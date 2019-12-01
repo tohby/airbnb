@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/owner/register', function () {
     return view('auth/owner_register');
 });
+Route::get('my/bookings', 'OwnerBookings@ownerbookings');
 
 
 //Route::po('/addroom', 'DashboardController@store')->name('addroom');
