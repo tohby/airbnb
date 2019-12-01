@@ -81,7 +81,10 @@ class RoomController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    { }
+    {
+        $room = Room::find($id);
+        return view('roomDetails')->with('room', $room);
+    }
 
     /**
      * Show the form for editing the specified resource.

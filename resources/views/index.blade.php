@@ -61,7 +61,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col CardBody">
-                                <a href="{{ URL::route('roomDetails') }}" style="color:black">
+                                <a href="/rooms/{{$room->id}}" style="color:black">
                                     <h5>{{$room->apartmentName}}</h5>
                                 </a>
                                     <p>{{$room->apartmentAddress}}</p>
