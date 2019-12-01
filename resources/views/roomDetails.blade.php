@@ -15,11 +15,11 @@
                                 <ol class="breadcrumb Details">
                                     <li class="breadcrumb-item">Home</li>
                                     <li class="breadcrumb-item"> Library</li>
-                                    <li class="breadcrumb-item active" aria-current="page">Modern Apartment With Pool</li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{$room->apartmentName}}l</li>
                                 </ol>
                             </nav>
-                            <h5>Modern Apartment With Pool</h5>
-                            <p> <i class="fas fa-map-marker-alt" style="margin-right: 5px"></i>984 1st Avenue, New York, NY 10022 </p>
+                            <h5>{{$room->apartmentName}}</h5>
+                            <p> <i class="fas fa-map-marker-alt" style="margin-right: 5px"></i>{{$room->apartmentAddress}}</p>
                         </div>
                         <div class="col HostPicture">
                             <img src="https://demo01.gethomey.io/wp-content/uploads/2018/10/HomeyHost08-150x150.jpg">
@@ -47,9 +47,7 @@
                     <hr>
                     <div class="AboutRoom">
                         <h5>About this listing</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi est quam, volutpat et arcu eu, pharetra congue augue. Integer vel nibh eu eros interdum commodo. Vivamus finibus fringilla libero, id consectetur purus sollicitudin
-                            vel. Proin dapibus ante et pharetra luctus. Ut lacinia ante ut nunc pellentesque auctor. Proin laoreet erat sed ornare molestie. Fusce vehicula ut nulla facilisis vulputate. Quisque vel purus ac lectus tempus viverra. Maecenas
-                            at sem at erat pellentesque hendrerit nec in massa. Vestibulum nec lacinia dui, a congue ex. Vivamus ac ultri</p>
+                        <p>{{$room->apartmentDescription}}</p>
                     </div>
                     <hr>
                     <div class="row RoomIndetails">
@@ -92,7 +90,7 @@
                 <div class="col-4 instantbooking">
                     <div class="row">
                         <div class="col PriceTittle">
-                            <h4>$455/<small>night</small></h4>
+                            <h4>{{$room->apartmentPrice}}/<small>night</small></h4>
                         </div>
                     </div>
                     <div class="row">
