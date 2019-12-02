@@ -18,7 +18,8 @@ class CreateOrdersTable extends Migration
             $table->date('arrival');
             $table->date('departure');
             $table->string('guests');
-            $table->integer('geustid');
+            $table->integer('guest_id');
+            $table->integer('room_id');
             $table->string('descriptions');
             $table->timestamps();
         });
