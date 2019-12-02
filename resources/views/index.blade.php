@@ -6,17 +6,17 @@
         <div class="BannerCaption">
             <h4>Book & Experience Amazing Places</h4>
             <p>WordPress Theme For Booking and Rental</p>
-            <form class="HomeSearch">
+            <form class="HomeSearch" action="{{action('SearchController@search')}}" method="POST">
+                @csrf
                 <div class="form-row justify-content-center">
                     <div class="col-8">
-                        <input data-provide="datepicker" type="text" class="form-control FormSearch"
-                            placeholder="Location">
+                        <input type="text" class="form-control FormSearch"
+                            placeholder="Location" name="searchKey">
                     </div>
 
                     <div class="col-1">
-                        <button type="button" class="btnHome  btn-lg">Search</button>
+                        <button type="submit" class="btnHome  btn-lg">Search</button>
                     </div>
-
                 </div>
             </form>
         </div>
