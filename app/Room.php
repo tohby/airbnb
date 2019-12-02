@@ -27,6 +27,6 @@ class Room extends Model
 
     public function searchableAs()
     {
-        return 'posts_index';
+        return 'apartmentName';
     }
 }
