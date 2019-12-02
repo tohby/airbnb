@@ -8,19 +8,11 @@
             <p>WordPress Theme For Booking and Rental</p>
             <form class="HomeSearch">
                 <div class="form-row justify-content-center">
-                    <div class="col-3">
+                    <div class="col-8">
                         <input data-provide="datepicker" type="text" class="form-control FormSearch"
                             placeholder="Location">
                     </div>
-                    <div class="col-2">
-                        <input type="text" class="form-control FormSearch datepicker" placeholder="Check In">
-                    </div>
-                    <div class="col-2">
-                        <input type="text" class="form-control FormSearch datepicker" placeholder="Check Out">
-                    </div>
-                    <div class="col-2">
-                        <input type="text" class="form-control FormSearch" placeholder="Guests">
-                    </div>
+
                     <div class="col-1">
                         <button type="button" class="btnHome  btn-lg">Search</button>
                     </div>
