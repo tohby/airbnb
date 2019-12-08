@@ -47,11 +47,12 @@ class OrdersController extends Controller
             'arrival' => $request->input('arrival'),
             'departure' => $request->input('departure'),
             'guests' => $request->input('guests'),
-            'mainguestName' => $request->input('mainguestName'),
+            'guest_user_id' => Auth::id(),
             'descriptions' => $request->input('descriptions'),
             'user_id' => Auth::id(),
+            'room_id' => $request->input('roomID'),
         ]);
-        return redirect('/Bookings');
+        return redirect('/Bookings')->with('success', 'Your order has been completed, our agent will contact you shortly');
     }
 
     /**

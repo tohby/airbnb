@@ -85,6 +85,9 @@ body {
 
     <section class="bodycontent">
         <div class="container">
+             @include('layouts/messages')
+        </div>
+        <div class="container">
             <h4 style="margin-left:10px">Bookings</h4>
             <div class="row">
                 <div class="col tablebody">

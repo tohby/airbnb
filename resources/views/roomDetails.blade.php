@@ -126,6 +126,8 @@
                                 <div class="form-group">
                                     <textarea class="form-control myform" id="inputAddress" name="descriptions" placeholder="Description About yourself" style="height: 100px"></textarea>
                                 </div>
+                                 <input type="hidden" name="roomID" value="{{$room->id}}">
+
                                 <button type="submit" class="btn" style="width: 310px; height:50px; background: rgb(255, 90, 95) !important; color: white">Book Now</button>
                             </form>
 

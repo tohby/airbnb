@@ -24,7 +24,10 @@ class Room extends Model
     {
         return $this->hasMany('App\RoomImages');
     }
-
+    public function orders()
+    {
+        return $this->hasMany('App\Orders');
+    }
     public function searchableAs()
     {
         return 'apartmentName';
