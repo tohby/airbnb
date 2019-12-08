@@ -112,11 +112,11 @@ body {
                         </div>
                     </div>
                     <!-- END OF TITTLE -->
-                    @foreach ($rooms as $room)
+                    @foreach ($orders as $order)
                     <div class="row" style="
                     margin-top: 53px;">
                         <div class="col ContentImg">
-                            <img src="/storage/post_images/{{$room->images[0]->image}}" alt="#" />
+                            <img src="/storage/post_images/{{$order->room->images[0]->image}}" alt="#" />
                         </div>
                         <div class="col ">
                             {{$order->id}}

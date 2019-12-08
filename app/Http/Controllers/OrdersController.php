@@ -16,7 +16,7 @@ class OrdersController extends Controller
     public function index()
     {
         $orders = Orders::get();
-        return view('/Bookings')->with('Orders', $orders);
+        return view('/Bookings')->with('orders', $orders);
     }
 
     /**
