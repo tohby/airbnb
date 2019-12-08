@@ -24,7 +24,7 @@
                             </div>
 
                             <div class="col-1">
-                                <button type="submit" class="btnHome  btn-lg">Search</button>
+                                <button  type="submit" class="btnHome  btn-lg">Search</button>
                             </div>
                         </div>
                     </form>
