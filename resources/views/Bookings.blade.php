@@ -112,27 +112,29 @@ body {
                         </div>
                     </div>
                     <!-- END OF TITTLE -->
+                    @foreach ($rooms as $room)
                     <div class="row" style="
                     margin-top: 53px;">
                         <div class="col ContentImg">
-                            <img src="https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="#" />
+                            <img src="/storage/post_images/{{$room->images[0]->image}}" alt="#" />
                         </div>
                         <div class="col ">
-                            Hotel Califonia
+                            {{$order->id}}
                         </div>
                         <div class="col ">
-                            12/12/2020
+                            {{$order->arrival}}
                         </div>
                         <div class="col ">
-                            Atere Stephen Akindmola
+                            {{$order->guests}}
                         </div>
                         <div class="col ">
-                            $200
+                            {{$order->price}}
                         </div>
                         <div class="col Status">
                             <button type="button" class="btn btn-success">Success</button>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
