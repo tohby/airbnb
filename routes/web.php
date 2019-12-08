@@ -11,8 +11,6 @@
 |
 */
 
-use App\Htp\Controllers\MyRoomsController;
-
 Route::get('/', 'MyRoomsController@usersRooms');
 Route::get('/Sortroom', 'MyRoomsController@RoomsSort')->name('Sortroom');
 Route::get('/roomDetails', 'MyRoomsController@roomDetails')->name('roomDetails');
@@ -24,13 +22,6 @@ Route::get('/owner/register', function () {
     return view('auth/owner_register');
 });
 Route::get('my/bookings', 'OwnerBookings@ownerbookings');
-
-
-//Route::po('/addroom', 'DashboardController@store')->name('addroom');
-//Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-// Route::get('/success', function () {
-//     return view('rooms/roomadded');
-// });
 
 Route::resource('/rooms', 'RoomController');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
