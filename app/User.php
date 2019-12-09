@@ -42,4 +42,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Room');
     }
 
+    public function orders()
+    {
+        return $this->hasManyThrough(
+            'App\Orders', 'App\Room'
+        );
+    }
+
 }

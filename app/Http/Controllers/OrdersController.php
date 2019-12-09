@@ -15,11 +15,13 @@ class OrdersController extends Controller
      */
     public function index()
     {
+        $user_id = auth()->user()->id;
         if (Auth::user()->role == 0){
-            $user_id = auth()->user()->id;
             $orders = Orders::where('guest_id', $user_id)->get();
         } else {
-            $orders = Orders::get();
+            // $orders = Orders::get();
+            $user = User::find($user_id);
+            $orders = $user->orders;
         }
         
         return view('/Bookings')->with('orders', $orders);
